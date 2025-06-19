@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@400;500;600;700&family=Ink+Free:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="todo-container">
+
+        <div id="program-support">
+            <button class="helpBtn" title="Help"></button>
+            <button class="saveBtn" title="Save"></button>
+            <button class="newPageBtn" title="New Page"></button>
+            <button class="soundBtn" title="Sound"></button>
+        </div>
+
+        <!-- TO-DO Header -->
+        <div id="header">
+            <h1>TO-DO</h1>
+        </div>
+
+        <!-- Input Box -->
+        <div id="todo-form">
+            <input
+                type="text"
+                class="input-item"
+                name="input_box"
+                id="input-box"
+                placeholder="Add Task"
+            />
+
+            <button id="input-button" onclick="addTask(); document.getElementById('click').play()">Add</button>
+            <audio id="click" src="audio/click.wav"></audio>
+        </div>
+
+        <!-- Task List -->
+        <h2>Task List</h2>
+        <h3><span id="list-date"></span></h3>
+        <ul id="list-container"></ul>
+        <hr />
+        <!-- Task List Counter -->
+         <div class="counter-container">
+            <div id="task-counters">
+                completed: <span id="completed-counter">0</span> | 
+                uncompleted: <span id="uncompleted-counter"></span>
+            </div>
+         </div>
+
+         <!-- Add-ons -->
+         <div class="filter-tools">
+            <span class="state">Active Tasks</span>
+            <label class="toggle-container"> 
+                <input type="checkbox">
+                <span class="active-toggle" onclick="document.getElementById('switch').play()"></span>
+                <audio id="switch" src="audio/switch.wav"></audio>
+            </label>
+            <button class="delAll" title="Delete all tasks" onclick="document.getElementById('click').play()"></button>
+            <audio id="click" src="audio/click.wav"></audio>
+         </div>
+         <div class="org-tools">
+            <span class="priority">Priority Tasks</span>
+            <label class="pritoggle-container">
+                <input type="checkbox">
+                <span class="priority-toggle" onclick="document.getElementById('switch').play()"></span>
+                <audio id="switch" src="audio/switch.wav"></audio>
+            </label>
+            <button class="shuffle" title="Shuffle tasks" onclick="document.getElementById('click').play()"></button>
+            <audio id="click" src="audio/click.wav"></audio>
+         </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
