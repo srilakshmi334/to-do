@@ -1,6 +1,8 @@
 # to-do
 TO-DO List Tracker
-Based on Codedex Project: https://www.codedex.io/projects/create-a-to-do-list-app-with-html-css-js
+
+
+Based on Codédex Project: https://www.codedex.io/projects/create-a-to-do-list-app-with-html-css-js
 
 
 A Javascript app used to organize daily tasks to improve schedule productivity. Use of HTML & CSS for initial app design.
